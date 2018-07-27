@@ -59,9 +59,11 @@ Python uses **Dynamic typing** which allows us to reassign variables to differen
     //You can reassign them to list
     my_dogs = ["Rammy", "Tammy"]
 
-**Pros of Dynamic typing**  
-    - very easy to work with
-    - faster development time
+**Pros of Dynamic typing**   
+    - very easy to work with  
+    - faster development time   
 **Cons of Dynamic typing**   
-    - May result in bugs for unexpected data types
+    - May result in bugs for unexpected data types   
     - You need to be aware of **type()** function to check the data type.
+
+
