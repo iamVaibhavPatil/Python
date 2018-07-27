@@ -39,6 +39,6 @@ Floating point | float | Numbers with decimal points: 89.83 4.7
 Strings | str | Ordered sequence of characters: "hello", "Jane"
 Lists | list | Ordered sequence of objects: [10,"hello",100.20]
 Dictionaries | dict | Unordered key-value pairs: {"mykey":"value","name":"Jone"}
-Tuples | tup | Ordered immutable sequence of objects: (10,"hello",100.20)
-Sets | set | Unordered collection of unique objects: {"a","b"}
+Tuples | tup | Ordered **immutable** sequence of objects: (10,"hello",100.20)
+Sets | set | Unordered collection of **unique** objects: {"a","b"}
 Boolean | bool | Logical value indicating True or False
