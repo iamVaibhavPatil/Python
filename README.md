@@ -70,7 +70,7 @@ Python uses **Dynamic typing** which allows us to reassign variables to differen
 ## Strings  
 Strings are order sequences of characters. As strings are order sequences we can use **indexing or slicing** to grab the sub sections of the string.   
 
-Indexing - Indexing allowes you to get single characters from the string. Index start at 0 position. We can also use **reverse  indexing** which start at -1 to get last character from string. We use reverse indexing when we dont know the length of the string.
+**Indexing** - Indexing allowes you to get single characters from the string. Index start at 0 position. We can also use **reverse  indexing** which start at -1 to get last character from string. We use reverse indexing when we dont know the length of the string.
 
 ```
 Character    - h  e  l  l  o
@@ -78,7 +78,7 @@ Index        - 0  1  2  3  4
 Reverse Index- 0 -4 -3 -2 -1
 ```
 
-Slicing -  Slicing allows you to grab a sub section of multiple characters, a slice of a string. Following syntax -   
+**Slicing** -  Slicing allows you to grab a sub section of multiple characters, a slice of a string. Following syntax -   
 
 **[start:stop:step]**   
 
