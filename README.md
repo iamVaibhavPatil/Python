@@ -42,3 +42,27 @@ Dictionaries | dict | Unordered key-value pairs: {"mykey":"value","name":"Jone"}
 Tuples | tup | Ordered **immutable** sequence of objects: (10,"hello",100.20)
 Sets | set | Unordered collection of **unique** objects: {"a","b"}
 Boolean | bool | Logical value indicating True or False
+
+Python 3 performs true division by default!
+
+## Variables
+
+1. Cannot start with numbers
+2. Cannot use spaces, use _ instead
+3. best practice to use lowercase
+4. best preactice to avoid using keywords like list, str
+
+Python uses **Dynamic typing** which allows us to reassign variables to different data types. This makes python very felxible in assigning data types, this is different than other languages that are **Statically-typed**
+
+    ```
+    my_dogs = 2
+
+    //You can reassign them to list
+    my_dogs = ["Rammy", "Tammy"]
+    ```
+**Pros of Dynamic typing**  
+    - very easy to work with
+    - faster development time
+**Cons of Dynamic typing**   
+    - May result in bugs for unexpected data types
+    - You need to be aware of **type()** function to check the data type.
