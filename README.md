@@ -62,6 +62,7 @@ Python uses **Dynamic typing** which allows us to reassign variables to differen
 **Pros of Dynamic typing**   
     - very easy to work with  
     - faster development time   
+
 **Cons of Dynamic typing**   
     - May result in bugs for unexpected data types   
     - You need to be aware of **type()** function to check the data type.
