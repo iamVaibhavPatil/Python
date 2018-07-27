@@ -54,12 +54,11 @@ Python 3 performs true division by default!
 
 Python uses **Dynamic typing** which allows us to reassign variables to different data types. This makes python very felxible in assigning data types, this is different than other languages that are **Statically-typed**
 
-    ```
     my_dogs = 2
 
     //You can reassign them to list
     my_dogs = ["Rammy", "Tammy"]
-    ```
+
 **Pros of Dynamic typing**  
     - very easy to work with
     - faster development time
