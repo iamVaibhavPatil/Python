@@ -27,4 +27,18 @@ There are 3 main types of environments -
 **PyCharm and Spyder**
 
 3. Notebook environments
-Notebooks are special file formats(**.ipynb**) that are not **.py** extentions. We can see input and output next to eachother. Supports inline markdown notes, visualations, videos and more. Most popular is the Jupyter Notesbook.
+Notebooks are special file formats(**.ipynb**) that are not **.py** extentions. We can see input and output next to eachother. Supports inline markdown notes, visualations, videos and more. Most popular is the Jupyter Notesbook. We can use Anaconda navigator to launch the Jupyter notebook.
+
+## Data Types
+Basic building blocks for creating objects and data structures
+
+Name | Type | Description
+------------ | ------------- | -------------
+Integers | int | Whole numbers: 3 300 200
+Floating point | float | Numbers with decimal points: 89.83 4.7
+Strings | str | Ordered sequence of characters: "hello", "Jane"
+Lists | list | Ordered sequence of objects: [10,"hello",100.20]
+Dictionaries | dict | Unordered key-value pairs: {"mykey":"value","name":"Jone"}
+Tuples | tup | Ordered immutable sequence of objects: (10,"hello",100.20)
+Sets | set | Unordered collection of unique objects: {"a","b"}
+Boolean | bool | Logical value indicating True or False
