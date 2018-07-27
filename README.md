@@ -78,5 +78,11 @@ Index        - 0  1  2  3  4
 Reverse Index- 0 -4 -3 -2 -1
 ```
 
-Slicing -  Slicing allows you to grab a sub section of multiple characters, a slice of a string. Following syntax - **[start:stop:step]**. Start is numerical index for the slice start.
+Slicing -  Slicing allows you to grab a sub section of multiple characters, a slice of a string. Following syntax -   
+
+**[start:stop:step]**   
+
+**Start** is numerical index for the slice start   
+**stop** index you will go upto but not include    
+**step** size of the jump you take  
 
