@@ -84,5 +84,16 @@ Reverse Index- 0 -4 -3 -2 -1
 
 **Start** is numerical index for the slice start   
 **stop** index you will go upto but not include    
-**step** size of the jump you take  
+**step** size of the jump you take. Default jump size is 1.
 
+**len(str)** - It allows to get the length of the string.
+
+**1. Properties of String**   
+- Immutability - Strings are immutable in nature. You can't use indexing to change individual elements of a string.   
+- Concatenation - Supports concatenation using + operator   
+- Multiplication - * to print number of type   
+
+**2. Methods**   
+Various build methods like upper(), lower(), count(), find(), split() - Default split by space, otherwise pass the split regex etc
+
+**3. Print formatting with Strings**  
