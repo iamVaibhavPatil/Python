@@ -116,6 +116,25 @@ Different methods -
 3. sort() - in place sorting for the list. It does not return new list. It will sort the existing list.  
 4. reverse() - reverse the list. This is also in place method.   
 
+Use list when objects are order sequence and when we need to get object by index or perform slicing.
 
 ## Dictionaries  
+Dictionaries are un ordered mapping for storing key-value pairs. This key-value mappings allows user to quickly grab objects without needing to know the index location.  
 
+Dictionaries uses - {"key":"value", "key2":"value2"}
+
+Use dictionaries when we objects are unordered and cannot be sorted.
+
+We can store complex objects in the dictionaries like below
+
+d = {'k1':120, 'k2':[1,2,3], 'k3': {'insideKey': 'Hello'}}
+
+Different methods -
+1. keys() - return all keys  
+2. values() - return all values  
+3. items() - return all key-value pairs  
+4. d['key'] - return values associated with key
+
+Dectionaries does not support ordering, but if we like to keep the ordering then we can use - ordereddict
+
+## Tuples  
