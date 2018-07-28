@@ -138,3 +138,15 @@ Different methods -
 Dectionaries does not support ordering, but if we like to keep the ordering then we can use - ordereddict
 
 ## Tuples  
+Tuples are very similar to list, but they are **immutable**. Onces an element is inside tuple, it can not be re-assigned. Tuples uses parenthesis : (1,2,3).
+
+Different methods -   
+1. count - Get the count of occurences of input object  
+
+For example - t = ('a','a','b')  .....now t.count('a') --> 2   
+
+2. index - return index of element inside tuple - t.index('b') --> 2  
+
+Tuples mostly used when we pass the objects around the methods, to make sure they dont change.
+
+## Sets
