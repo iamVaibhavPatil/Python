@@ -150,3 +150,11 @@ For example - t = ('a','a','b')  .....now t.count('a') --> 2
 Tuples mostly used when we pass the objects around the methods, to make sure they dont change.
 
 ## Sets
+Sets are unordered collections of unique elements. There can be only one representative of the same object.
+
+list = [1,2,1,3,2,4,3,5]
+set(list)  --> {1,2,3,4,5}
+
+## Booleans
+Booleans are operators that allow you to convey **true or false**
+
