@@ -96,4 +96,12 @@ Reverse Index- 0 -4 -3 -2 -1
 **2. Methods**   
 Various build methods like upper(), lower(), count(), find(), split() - Default split by space, otherwise pass the split regex etc
 
-**3. Print formatting with Strings**  
+**3. Print formatting with Strings**    
+There are multiple ways to format string for printing variables in them, this is called as **interpolation.**  
+
+**.format()** -   
+**f-strings**(formatted string literals) - 
+
+Awesome source for print formatting - https://pyformat.info/
+
+
