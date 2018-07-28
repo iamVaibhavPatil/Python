@@ -158,3 +158,68 @@ set(list)  --> {1,2,3,4,5}
 ## Booleans - bool   
 Booleans are operators that allow you to convey **true or false**
 
+
+## Files I/O  
+You can open any file in python using below command.
+
+**Reading the file**   
+
+```
+myfile = open('myfile.txt')  
+
+myfile.read()  -> Returns entire file --> 'Hello this is a text file\nthis is the second line\nthis is the third line'
+
+myfile.seek(0)  --> Set cursor back to 0 location to read the file again.
+
+myfile.readlines()  --> Read each line and store as list. We can loop throught it and print what is required.
+
+myfile.readline() --> read single line at a time
+
+myfile.close()  --> Close the file
+
+
+When we do not want to worry about closing the file, we can use **with & as** to open the file like below -  
+
+with open('myfile.txt') as my_new_file:
+    contents = my_new_file
+
+```
+
+**Writing to file**   
+
+```
+with open('my_new_file.txt',mode='a') as f:
+    f.write('\nFOUR ON FOURTH')
+
+
+with open('my_new_file.txt',mode='r') as f:
+    print(f.read())
+
+with open('dkfhdskf.txt',mode='w') as f:
+    f.write('My content to the file')
+
+with open('dkfhdskf.txt',mode='r') as f:
+    print(f.read())
+
+```
+
+**Different modes**  
+r - read only  
+w - Write or Overwrite only  
+a - append only  
+r+ - reading and writing  
+w+ - Writing and reading  
+
+
+## Problems 
+
+- Basic Practice - http://codingbat.com/python  
+
+- More Mathematical (and Harder) Practice - https://projecteuler.net/archives  
+
+- List of Practice Problems - http://www.codeabbey.com/index/task_list  
+
+- A SubReddit Devoted to Daily Practice Problems - https://www.reddit.com/r/dailyprogrammer  
+
+- A very tricky website with very few hints and touch problems (Not for beginners but still interesting)- http://www.pythonchallenge.com/  
+
