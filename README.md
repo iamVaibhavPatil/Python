@@ -116,7 +116,7 @@ Different methods -
 3. sort() - in place sorting for the list. It does not return new list. It will sort the existing list.  
 4. reverse() - reverse the list. This is also in place method.   
 
-Use list when objects are order sequence and when we need to get object by index or perform slicing.
+Use list when objects are order sequence and when we need to get object by index or perform slicing. We can use **sorted(list)** method to sort list which return new list.
 
 ## Dictionaries - dict  
 Dictionaries are un ordered mapping for storing key-value pairs. This key-value mappings allows user to quickly grab objects without needing to know the index location.  
