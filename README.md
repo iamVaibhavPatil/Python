@@ -102,6 +102,20 @@ There are multiple ways to format string for printing variables in them, this is
 **.format()** -   
 **f-strings**(formatted string literals) - 
 
-Awesome source for print formatting - https://pyformat.info/
+Awesome source for print formatting - https://pyformat.info/   
 
+
+## Lists
+Lists are order sequences that can hold variety of object types. They use brackets[] and commas to separate objects in the list, [1,2,3,4]. List supports **indexing and slicing**.
+
+They are similar to Strings like we can contact 2 list using + operator, can do indexing and slicing. We can mutate list using by index.
+
+Different methods -   
+1. append()  - Add element to end of the list   
+2. pop() - remove list element. Default will remove element from end or we can pass the index of item to be removed   
+3. sort() - in place sorting for the list. It does not return new list. It will sort the existing list.  
+4. reverse() - reverse the list. This is also in place method.   
+
+
+## Dictionaries  
 
