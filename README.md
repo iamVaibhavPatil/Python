@@ -67,7 +67,7 @@ Python uses **Dynamic typing** which allows us to reassign variables to differen
     - May result in bugs for unexpected data types   
     - You need to be aware of **type()** function to check the data type.
 
-## Strings  
+## Strings  - str
 Strings are order sequences of characters. As strings are order sequences we can use **indexing or slicing** to grab the sub sections of the string.   
 
 **Indexing** - Indexing allowes you to get single characters from the string. Index start at 0 position. We can also use **reverse  indexing** which start at -1 to get last character from string. We use reverse indexing when we dont know the length of the string.
@@ -105,7 +105,7 @@ There are multiple ways to format string for printing variables in them, this is
 Awesome source for print formatting - https://pyformat.info/   
 
 
-## Lists
+## Lists - list  
 Lists are order sequences that can hold variety of object types. They use brackets[] and commas to separate objects in the list, [1,2,3,4]. List supports **indexing and slicing**.
 
 They are similar to Strings like we can contact 2 list using + operator, can do indexing and slicing. We can mutate list using by index.
@@ -118,7 +118,7 @@ Different methods -
 
 Use list when objects are order sequence and when we need to get object by index or perform slicing.
 
-## Dictionaries  
+## Dictionaries - dict  
 Dictionaries are un ordered mapping for storing key-value pairs. This key-value mappings allows user to quickly grab objects without needing to know the index location.  
 
 Dictionaries uses - {"key":"value", "key2":"value2"}
@@ -137,7 +137,7 @@ Different methods -
 
 Dectionaries does not support ordering, but if we like to keep the ordering then we can use - ordereddict
 
-## Tuples  
+## Tuples - tup  
 Tuples are very similar to list, but they are **immutable**. Onces an element is inside tuple, it can not be re-assigned. Tuples uses parenthesis : (1,2,3).
 
 Different methods -   
@@ -149,12 +149,12 @@ For example - t = ('a','a','b')  .....now t.count('a') --> 2
 
 Tuples mostly used when we pass the objects around the methods, to make sure they dont change.
 
-## Sets
+## Sets - set  
 Sets are unordered collections of unique elements. There can be only one representative of the same object.
 
 list = [1,2,1,3,2,4,3,5]
 set(list)  --> {1,2,3,4,5}
 
-## Booleans
+## Booleans - bool   
 Booleans are operators that allow you to convey **true or false**
 
