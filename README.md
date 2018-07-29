@@ -267,12 +267,140 @@ for key,val in d.items():
     print(val)
 ```
 
-**3. while loop** 
+**3. while loop**   
+We can use while to execute some block of code until some condition is True.
+
+```
+while some_boolean_condition:
+    #execute something
+```
+
+We can also combine **else** condition to exeucte if the while condition is not True
+
+```
+while some_boolean_condition:
+    #do something
+else:
+    #do something different
+```
+
+If we go into continuos loop in  Jupyter, we can use Kernel -> Interrupt or Restart to stop execution.
+
+**4. break, continue, pass**  
+We can use break, continue, pass statements in our loops to add additional functionality for various cases.
+
+**break** - Breaks out of current closest enclosing loop.  
+**continue** - Goes to the top of the closest enclosing loop.  
+**pass** - Does nothing at all.  
 
 
+**5. Useful Operators**  
+
+**range(10)** - Used in for loop to print numbers upto input number, but not including it.  
+
+```
+**Print from 0 to 9**
+for num in range(10):
+    print(num)
+
+**Print from 3 to 9**
+for num in range(3,10):
+    print(num)
+
+**Print from 0 to 9 with step size of 2**
+for num in range(0,10,2):
+    print(num)
+
+list(range(0,11,2)) --> This will create a list with [0,2,4,6,8,10]
+```
+
+**enumerations** - We can define a variable and increment it when looping through for/while loop to check how many time we have gone through loop. We can use **enumerate** operator with tuple unpacking like below.
+
+```
+word = 'abcde'
+
+for index, letter in enumerate(word):
+    print(index)
+    print(letter)
+    print('\n')
+```
+
+**zip** - Zip content of 2 or more list into one for iterate over it. If list or uneven, then it will zip with small length list. It will ignore everything which is extra.
+
+```
+mylist1 = [1,2,3]
+mylist2 = ['a','b','c']
+mylist3 = [100,200,300]
+
+for item in zip(mylist1,mylist2,mylist3):
+    print(item)
+
+This will print 
+
+(1, 'a', 100)
+(2, 'b', 200)
+(3, 'c', 300)
 
 
+list(zip(mylist1,mylist2,mylist3)) --> [(1, 'a', 100), (2, 'b', 200), (3, 'c', 300)]
 
+```
+
+**in** - This operator checks if the element is in the list. Return True/False. It works with list, string, dictionaries.
+
+```
+'x' in [1,2,3] --> False
+
+'x' in ['x','y','z'] --> True
+
+'o' in 'a world' --> True
+
+'mykey' in {'mykey':345}  --> True
+
+d = {'mykey':345}
+345 in d.values()  --> True
+```
+
+**min/max** - Get the min and max
+
+```
+mylist = [10,20,30,40,50,100]
+min(mylist) --> 10
+max(mylist) --> 100
+```
+
+**random** - Python comes with a lot of different libraries. We can import random library and use a lot of function inside that library.  
+
+shuffle - Shuffle elements in place
+
+```
+#Shuffle mylist
+from random import shuffle
+mylist = [1,2,3,4,5,6,7,8,9,10]
+shuffle(mylist)
+
+#Random integer from 0 to 100
+from random import randint
+randint(0,100)
+
+```
+
+**input** - Ask user for input. We can pass optional text message to show to user. Input parses anything passed to it as String.
+
+```
+result = input('Enter a number here:')
+result --> '20'
+
+type(result) --> str
+float(result) --> 20.0
+int(result) --> 20
+
+#OR we could do below to get number in proper format
+result = int(input('Whats your favorite number?'))
+```
+
+**6. List Comprehensions**  
+  
 
 
 
