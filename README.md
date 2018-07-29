@@ -211,7 +211,65 @@ r+ - reading and writing
 w+ - Writing and reading  
 
 
-## Problems 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Problems link for exercise
 
 - Basic Practice - http://codingbat.com/python  
 
