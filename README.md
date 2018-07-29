@@ -400,7 +400,57 @@ result = int(input('Whats your favorite number?'))
 ```
 
 **6. List Comprehensions**  
-  
+List comprehensions are unique way of quickly creating list with python.  
+
+We have below code to convert string into list of characters.
+```
+mystring = 'hello'
+mylist = []
+
+for letter in mystring:
+    mylist.append(letter)
+mylist --> ['h','e','l','l','0']
+```
+We can use list comprehension to reduce the line of code and write this in one line with below code -
+```
+mylist = [letter for letter in mystring]
+mylist --> ['h','e','l','l','0']
+
+mylist = [x for x in 'word']
+mylist --> ['w', 'o', 'r', 'd']
+
+mylist = [num for num in range(0,11)]
+mylist --> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+#Square of each element in array
+mylist = [num**2 for num in range(0,11)]
+mylist --> [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+#Print even number
+mylist = [x for x in range(0,11) if x%2==0]
+mylist --> [0, 2, 4, 6, 8, 10]
+
+#Complex
+celcius = [0,10,20,34.5]
+fahrenheit = [(9/5)*temp + 32 for temp in celcius]
+fahrenheit --> [32.0, 50.0, 68.0, 94.1]
+
+#More complex with if else - We should not write like below, it's not readable, but possible
+result = [x if x%2==0 else 'ODD' for x in range(0,11)]
+result --> [0, 'ODD', 2, 'ODD', 4, 'ODD', 6, 'ODD', 8, 'ODD', 10]
+
+#Nested loops
+mylist = []
+
+for x in [2,4,6]:
+    for y in [100,200,300]:
+        mylist.append(x*y)
+mylist --> [200, 400, 600, 400, 800, 1200, 600, 1200, 1800]
+
+#With comprehension
+mylist = [x*y for x in [2,4,6] for y in [100,200,300]]
+mylist --> [200, 400, 600, 400, 800, 1200, 600, 1200, 1800]
+```
 
 
 
