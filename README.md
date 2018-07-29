@@ -220,6 +220,20 @@ w+ - Writing and reading
 and, or, not
 
 
+## Statements and Loops  
+Control flow syntax makes use of colons and indentation.
+
+**1. if elif else**  
+```
+if some_condition:
+    #execute some code
+elif some_other_condition:
+    #do something different
+else:
+    #do something else
+```
+
+
 
 
 
