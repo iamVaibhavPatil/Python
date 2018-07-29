@@ -452,6 +452,7 @@ mylist = [x*y for x in [2,4,6] for y in [100,200,300]]
 mylist --> [200, 400, 600, 400, 800, 1200, 600, 1200, 1800]
 ```
 
+## Methods and Functions  
 
 
 
