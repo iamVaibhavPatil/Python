@@ -244,8 +244,30 @@ for item_name in my_iterable:
 
 When we do not want to use variabl for doing doing . Peopl generally use underscore(_).
 
+**Tuple unpacking**  
+Unpack the tuple while iterating over the list  
 
+```
+mylist = [(1,2),(3,4),(5,6),(7,8)]
+for (a,b) in mylist:
+    print(a)
+    print(b)
+```
 
+```
+d = {'k1':1, 'k2':2, 'k3':3}
+
+for item in d:
+    print(item)
+
+# This will print k1,k2,k3 by default it prints keys. To get key-value, we need to loop through .items()
+
+d = {'k1':1, 'k2':2, 'k3':3}
+for key,val in d.items():
+    print(val)
+```
+
+**3. while loop** 
 
 
 
