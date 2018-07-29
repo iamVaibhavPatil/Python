@@ -233,6 +233,18 @@ else:
     #do something else
 ```
 
+**2. For loop**  
+Many objects in python are **iterable** such as every element in the list, every character in a string, every key in dictionary.
+
+```
+my_iterable = [1,2,3]
+for item_name in my_iterable:
+    print(item_name)
+```
+
+When we do not want to use variabl for doing doing . Peopl generally use underscore(_).
+
+
 
 
 
