@@ -211,6 +211,13 @@ r+ - reading and writing
 w+ - Writing and reading  
 
 
+## Operators  
+
+**1. Mathematical Operators**  
+==, !=, <, >, >=, <=
+
+**2. Logical Operators**  
+and, or, not
 
 
 
