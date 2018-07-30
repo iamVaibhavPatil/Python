@@ -517,7 +517,7 @@ myfunc(40,60,100,1)
 ```
 ** *args are treated as tuple** inside the function, so if we print args inside a function, it will print the tuple containing all the input arguments. Arbitary argument name can be anything, but we need to put * in front of to make if accept arbitary number of arguments.
 
-****kwrgs are treated as dictionaries** inside the function.
+**\*\*kwrgs are treated as dictionaries** inside the function.
 
 ```
 def myfunc(**kwargs):
