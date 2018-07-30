@@ -506,6 +506,45 @@ def pig_latin(word):
     return pig_word
 ```
 
+**3. *args and **kwargs **  
+These are 2 functional parameters - argument and keyword argument. These are used for getting arbitary number of arguments and keyword arguments.
+
+```
+def myfunc(*args):
+    return sum(args) * 0.05
+myfunc(40,60)
+myfunc(40,60,100,1)
+```
+** *args are treated as tuple** inside the function, so if we print args inside a function, it will print the tuple containing all the input arguments. Arbitary argument name can be anything, but we need to put * in front of to make if accept arbitary number of arguments.
+
+** **kwrgs are treated as dictionaries** inside the function.
+
+```
+def myfunc(**kwargs):
+    if 'fruit' in kwargs:
+        print('My fruit of choice is {}'.format(kwargs['fruit']))
+    else:
+        print('I did not find any fruit here')
+
+myfunc(fruit='apple') --> My fruit of choice is apple
+myfunc(fruit='apple',veggie='lettuce') --> It will work without any issues
+```
+
+We could use *args & **kwargs both in same function as below -
+
+```
+def myfunc(*args,**kwargs):
+    print(args)
+    print(kwargs)
+    print('I would like {} {}'.format(args[0],kwargs['food']))
+
+myfunc(10,20,30,fruit='orange',food='eggs',animal='dog')
+
+--> Output is
+(10, 20, 30)
+{'fruit': 'orange', 'food': 'eggs', 'animal': 'dog'}
+I would like 10 eggs
+```
 
 
 
