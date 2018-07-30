@@ -506,7 +506,7 @@ def pig_latin(word):
     return pig_word
 ```
 
-3. **\*args and **kwargs**
+**3. \*args and \*\*kwargs**
 These are 2 functional parameters - argument and keyword argument. These are used for getting arbitary number of arguments and keyword arguments.
 
 ```
