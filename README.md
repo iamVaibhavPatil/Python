@@ -454,6 +454,58 @@ mylist --> [200, 400, 600, 400, 800, 1200, 600, 1200, 1800]
 
 ## Methods and Functions  
 
+**1. Methods**  
+Built in objects in Python have variety of methods we can use. In Jupyter notebook, we can use SHIFT+TAB to get help for the method signature and details about them.
+
+We can also use help function to get the help like -
+```
+help(mylist.insert) --> This will return help about the insert function.
+```
+
+**2. Functions**  
+Functions allows modularity in the programming.
+
+```
+#Basic function
+def name_of_function():
+    #Explain function
+    print("Hello")
+
+#Function with arguments
+def name_of_function(name):
+    #Explain function
+    print(f'Hello {name}')
+
+#Function returning value
+def add_function(num1, num2):
+    return num1 + num2
+
+#Function with documentation - We can do SHIFT+TAB to get the help and it will show below doc from **'''Help'''**
+def add_function(num1,num2):
+    '''
+    DOCSTRING:This can be used to add 2 numbers
+    INPUT: 2 numbers, num1 & num2
+    OUTPUT: Result output will be addition of 2 input numbers
+    '''
+    return num1 + num2
+
+#Default argument, when not passed from caller of the program.
+def say_hello(name='NAME'):
+    print('hello '+name)
+say_hello('Vaibhav') --> hello Vaibhav
+say_hello() --> hello NAME
+
+#PIG_LATIN word
+def pig_latin(word):
+    first_letter = word[0]
+    #Check if vowel
+    if first_letter in 'aeiou':
+        pig_word = word + 'ay'
+    else:
+        pig_word = word[1:] + first_letter + 'ay'
+    return pig_word
+```
+
 
 
 
