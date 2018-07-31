@@ -452,6 +452,14 @@ mylist = [x*y for x in [2,4,6] for y in [100,200,300]]
 mylist --> [200, 400, 600, 400, 800, 1200, 600, 1200, 1800]
 ```
 
+**7. Join**  
+Join is used to join the list with specified pattern.
+
+```
+'--'.join([a,b,c])  --> 'a--b--c'
+' '.join(['Hello','World']) --> 'Hello World'
+```
+
 ## Methods and Functions  
 
 **1. Methods**  
@@ -545,6 +553,8 @@ myfunc(10,20,30,fruit='orange',food='eggs',animal='dog')
 {'fruit': 'orange', 'food': 'eggs', 'animal': 'dog'}
 I would like 10 eggs
 ```
+
+
 
 
 
