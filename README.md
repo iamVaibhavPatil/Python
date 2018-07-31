@@ -86,7 +86,8 @@ Reverse Index- 0 -4 -3 -2 -1
 **stop** index you will go upto but not include    
 **step** size of the jump you take. Default jump size is 1.
 
-**len(str)** - It allows to get the length of the string.
+**len(str)** - It allows to get the length of the string.  
+**capitalize()** - Capitalize the first letter in string.
 
 **1. Properties of String**   
 - Immutability - Strings are immutable in nature. You can't use indexing to change individual elements of a string.   
@@ -554,14 +555,72 @@ myfunc(10,20,30,fruit='orange',food='eggs',animal='dog')
 I would like 10 eggs
 ```
 
+**4. Lambda Expressions Map an Filter**  
 
+**map**  
+Map data from input iterable to output by applying a passed function on each element in the iterable
+Just pass the function name and iterable to map.
 
+```
+# Syntax
+map(func, iterable)
 
+def square(num):
+    return num**2
 
+# Print square of the array elements
+for item in map(square,[1,2,3,4,5]):
+    print(item)
 
+# Same as above
+list(map(square, mynums))
 
+def splicer(mystring):
+    if len(mystring)%2 == 0:
+        return 'EVEN'
+    else:
+        return mystring[0]
 
+names = ['Andy','Eve','Sally']
+list(map(splicer, names))  --> ['EVEN', 'E', 'S']
+```
 
+**filter**  
+Filters the data from the iterable based on the passed function and return new filtered iterable.
+
+```
+# Syntax
+filter(func, iterable)
+
+def check_even(num):
+    return num%2 == 0
+
+mynums = [1,2,3,4,5,6]
+list(filter(check_even,mynums))  --> [2, 4, 6]
+```
+
+**Lambda expressions**  
+Complex operations can be written in simple way using map, filter and lambda expressions. Lambda expressions are annonymous functions that can be used only once.
+
+```
+# Normal function
+def square(num):
+    return num**2
+
+# Converted lambda expression - We have to make use of labmda keyword
+square = lambda num: num**2
+
+square(4)  --> 16
+
+# We dont need to assign the name to lambda expression, most of the time we will use them as anonymous function like below -
+
+list(map(lambda num:num**2, mynums))  --> Map input to output with square
+list(filter(lambda num:num%2==0, mynums))  --> Filter even numbers
+```
+
+We should create lambda function only when they are easy to read and are small.
+
+**2. Nested statements and scope**  
 
 
 
