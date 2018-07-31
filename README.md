@@ -620,9 +620,38 @@ list(filter(lambda num:num%2==0, mynums))  --> Filter even numbers
 
 We should create lambda function only when they are easy to read and are small.
 
-**2. Nested statements and scope**  
+**5. Nested statements and scope**  
+When we create a variable in python, it is store in the namespace and has associated scope with it. Scope decides the visibility of the variable to other parts of the code.
 
+Python follows LEGB rules format for scoping -
 
+L - Local
+E - Enclosing functions local
+G - Global
+B - Built it like open, range, list
+
+Python will look for variable from Local to Built in, if not found will throw an error.
+
+```
+# GLOBAL
+name = 'THIS IS A GLOBAL STRING'
+
+def greet():
+    
+    # ENCLOSING
+    name = 'Sammy'
+    
+    def hello():
+        # LOCAL
+        name = 'I AM LOCAL'
+        print('Hello '+name)
+    
+    hello()
+
+greet()  --> Hello I AM LOCAL
+```
+
+We can use **global** keyward to grab or reassign the global variable to some different values, but we should avoid it.
 
 
 
