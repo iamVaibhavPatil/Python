@@ -655,7 +655,221 @@ We can use **global** keyward to grab or reassign the global variable to some di
 
 ## Object Oriented Programming  
 
+OOP allows programmers to create own custom objects with state and methods. We can encapsulate the code using classes and create methods inside it. __init__() is a special method inside every class which helps us to instantiate the object.
 
+Class is a blueprint from which we can create many objects.
+```
+class NameOfClass():
+
+    def __init__(self, param1, param2):
+        self.param1 = param1
+        self.param2 = param2
+
+    def some_method(self):
+        print(self.param)
+
+# Define a class
+class Sample():
+    pass
+
+# Create instance of class
+my_sample = Sample()
+
+type(my_sample) --> __main__.Sample
+```
+
+**1. Attributes**  
+
+**instance attribute** - Instance attributes are definded at the time of creation of the instance using self keyword in the __init__ method.  
+
+**class attributes** - Class attributes will be same for any instance of the class. They are class level rather than instance level. We don't need self keyword for this as self keyword is used when we need to define for instance of the class.
+
+```
+class Dog():
+    
+    # CLASS OBJECT ATTRIBUTE
+    # THESE WILL BE SAME FOR ANY INSTANCE OF CLASS
+    species = 'mammal'
+    
+    def __init__(self,breed,name,spots):
+        
+        # Attribute
+        # We take in the argument
+        # Assign it using self.attribute_name
+        
+        self.breed = breed
+        self.name = name
+        self.spots = spots
+```
+
+To refer the class attributes, we can use **self. as well as ClasName.** For example -  
+
+```
+self.species --> mammal
+Dog.species --> mammal
+```
+
+**2. Methods**
+Methods are functions which are defined inside the class to work with the class attribute or provide extra functionality to the classes. To refer the instance attribute in the class, we need to use self. For passed arguments to methods, we can directly refer them by name.
+
+```
+def bark(self,number):
+    print("WOOF! My name is {} and the number is {}".format(self.name,number))
+
+
+class Circle():
+    
+    # CLASS OBJECT ATTRIBUTE - 
+    pi = 3.14
+    
+    def __init__(self,radius=1):
+        self.radius = radius
+        self.area = radius * radius * Circle.pi
+        
+    # METHOD
+    def get_circumference(self):
+        return self.radius * self.pi * 2
+
+# Create an instance
+my_circle = Circle(30)
+
+my_circle.get_circumference()  --> 188.4
+my_circle.area --> 2826.0
+```
+
+**3. Inheritance**
+Inheritance helps us to define parent child relationship between classes to reuse the methods definded by the parent class
+
+```
+class Animal():
+    
+    def __init__(self):
+        print("ANIMAL CREATED")
+        
+    def who_am_i(self):
+        print("I am an animal")
+        
+    def eat(self):
+        print("I am eating")
+
+
+class Dog(Animal):
+    
+    def __init__(self):
+        # INSTANTIATE ANIMAL OBJECT
+        Animal.__init__(self)
+        print("Dog Created")
+    
+    # OVERRIDE THE METHOD FROM ANIMAL CLASS
+    def who_am_i(self):
+        print("I am a Dog")
+      
+    # ADD NEW METHODS TO CHILD CLASS
+    def bark(self):
+        print("WOOF!")
+
+my_dog = Dog()
+>> ANIMAL CREATED
+Dog Created
+
+my_dog.who_am_i() --> I am a Dog
+
+my_dog.eat() --> I am eating
+
+my_dog.bark() --> WOOF!
+```
+
+**4. Polymorphism**  
+Same name with different forms. We have 2 Class below Dog and Cat which has speak() method and another print_pet method which calls the speak method of the pet, so print_pet dont know what will be input object. print_pet will react different based on the input object we will pass, this is called as polymorphism.
+
+```
+class Dog():
+    
+    def __init__(self,name):
+        self.name = name
+    
+    def speak(self):
+        return self.name + ' says woof!'
+
+class Cat():
+    
+    def __init__(self,name):
+        self.name = name
+    
+    def speak(self):
+        return self.name + ' says meow!'
+
+
+def print_pet(pet):
+    print(pet.speak())
+
+niko = Dog("niko")
+felix = Cat("felix")
+
+print_pet(niko) --> niko says woof!
+print_pet(felix) --> felix says meow!
+```
+
+**5. Abstract classes**  
+Classes which expects never needs to be instantiated. It is designed to seve only as a base class.
+
+```
+class Animal():
+    
+    def __init__(self,name):
+        self.name = name
+        
+    def speak(self):
+        raise NotImplementedError("Subclass must implement this abstract method")
+
+my_animal = Animal('Frankie')
+my_animal.speak() --> This will throw an error that this class needs to be implemented by another child class
+
+class Dog(Animal):
+    
+    def speak(self):
+        return self.name + ' says woof!'
+
+class Cat(Animal):
+    
+    def speak(self):
+        return self.name + ' says meow!'
+
+fido = Dog("Fido")
+isis = Cat("Isis")
+
+print(fido.speak()) --> Fido says woof!
+print(isis.speak()) --> Isis says meow!
+```
+
+**6. Special(Magic/Dunder) method**  
+We can use paython build in methods and functions to enhance the class to give more information about the class or add more functionality on the class.
+
+If we create object and print it. It will print the location of object in the memory, but we can also use str method print nice pretty output.
+
+__init__  --> This is special method which helps us create an instance of the object
+__str__ --> Helps us to write the string representation of the object
+__len__ --> print the lenght
+__del__ --> to delete the object and do some more functionality
+
+```
+class Book():
+    
+    def __init__(self, name, author, pages):
+        self.name = name
+        self.author = author
+        self.pages = pages
+    
+    def __str__(self):
+        return f"This is {self.name} book by {self.author}"
+    
+    def __len__(self):
+        return self.pages
+    
+    def __del__(self):
+        print(f"The book {self.name} is deleted successfully")
+
+```
 
 
 
