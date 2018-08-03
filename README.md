@@ -974,7 +974,6 @@ As we begin to write code and have large number of modules, then we need to have
 There are 2 libraries in python which helps us to achieve this -
 
 **1. pylint** - This library looks at code and reports back possible issues like syntax error, formatting issues and styling etc  
-**2. unittest** - This built in library allow you to test your own programs and check you are getting desired outputs
 
 Python has set of styling convention rules known as **"PEP 8"**.
 
@@ -989,9 +988,46 @@ We can run pylink using -
 pylint simple1.py
 ```
 
-This will print all the statistics of the code including possible styling and syntax issues.
+This will print all the statistics of the code including possible styling and syntax issues.  
 
 
+**2. unittest** - This built in library allow you to test your own programs and check you are getting desired outputs
+
+
+```
+# caps.py
+
+def cap_text(text):
+    '''
+    INPUT a STRING
+    OUTPUT a Capitalized String
+    '''
+    return text.title()
+```
+
+We can write below code to do unit testing using unittest
+
+```
+# test_caps.py
+
+import unittest
+import caps
+
+class TestCap(unittest.TestCase):
+
+    def test_one_word(self):
+        text = "python"
+        result = caps.cap_text(text)
+        self.assertEqual(result,"Python")
+
+    def test_multi_word(self):
+        text = "monty python"
+        result = caps.cap_text(text)
+        self.assertEqual(result,"Monty Python")
+
+if __name__ == '__main__':
+    unittest.main()
+```
 
 
 
