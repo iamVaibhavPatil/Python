@@ -969,8 +969,27 @@ def ask_for_int():
 ```
 
 ## Pylint and Unit Testing  
+As we begin to write code and have large number of modules, then we need to have unit test code which will execute to make sure we are not breaking old code while writing a new code.
 
+There are 2 libraries in python which helps us to achieve this -
 
+**1. pylint** - This library looks at code and reports back possible issues like syntax error, formatting issues and styling etc  
+**2. unittest** - This built in library allow you to test your own programs and check you are getting desired outputs
+
+Python has set of styling convention rules known as **"PEP 8"**.
+
+Install pylink library using -  
+```
+pip install pylint
+```
+
+We can run pylink using -
+
+```
+pylint simple1.py
+```
+
+This will print all the statistics of the code including possible styling and syntax issues.
 
 
 
