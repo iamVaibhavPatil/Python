@@ -917,7 +917,6 @@ if __name__ == '__main__':
 ## Errors and Exception Handling  
 We use 3 keywords for this
 
-**1. Exception Handling**  
 **try:** This is the block of code to be attempted(may lead to an error)  
 **except:** This block of code will get executed if there is any error in try block  
 **finally:**  A final block of code to be executed regardless of an error  
@@ -969,7 +968,8 @@ def ask_for_int():
 
 ```
 
-**2. Pylint**  
+## Pylint and Unit Testing  
+
 
 
 
