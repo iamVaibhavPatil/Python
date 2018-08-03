@@ -914,6 +914,62 @@ if __name__ == '__main__':
     add()
 ```
 
+## Errors and Exception Handling  
+We use 3 keywords for this
+
+**1. Exception Handling**  
+**try:** This is the block of code to be attempted(may lead to an error)  
+**except:** This block of code will get executed if there is any error in try block  
+**finally:**  A final block of code to be executed regardless of an error  
+
+```
+# More general error
+try:
+    f = open('testfile','r')
+    f.write("Wite a test line")
+except:
+    print("There was a type Error!")
+finally:
+    print("I always run")
+
+# Catch specific errors and show appropriate error messages
+try:
+    f = open('testfile','w')
+    f.write("Wite a test line")
+except TypeError:
+    print("There was a type Error!")
+except OSError:
+    print("Hey you have an OS Error")
+finally:
+    print("I always run")
+
+# try/except/finally inside a function
+def ask_for_int():
+    try:
+        result = int(input("Please provide a number"))
+    except:
+        print("Whoops! That is not a number")
+    finally:
+        print("End of try/except/finally")
+
+# Go in loop till we get number
+def ask_for_int():
+    
+    while True:
+        try:
+            result = int(input("Please provide a number"))
+        except:
+            print("Whoops! That is not a number")
+            continue
+        else:
+            print("Yes thank you")
+            break
+        finally:
+            print("End of try/except/finally")
+
+```
+
+**2. Pylint**  
 
 
 
