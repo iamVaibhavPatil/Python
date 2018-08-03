@@ -872,6 +872,49 @@ class Book():
 ```
 
 ## Modules and Packages  
+PyPI is a repository for open source third party python packages. To install these third party libraries, we can use **pip install**.
+
+We can also create our own packages and module -
+
+**1. Modules**  
+Modules are just .py scripts that you call in another .py script
+
+```
+mymodule.py
+
+def my_func():
+    print("Hey I am a in mymodule.py")
+
+myprogram.py
+
+from mymodule import my_func
+my_func()
+
+#When we run python myprogram.py, then we get output as "Hey I am in my mymodule.py"
+```
+
+**2. Packages**  
+Packages are collection of modules. We need to create a package folder and create __init__.py file inside each package directory, so that python understands that these are not just folders, but packages. Place the .py file inside the package folder and them use them in the program.
+
+**3. __name__ and "__main__"**  
+There is not main() function in python, so how do we know which code to execute first. When we submit the python file.py command to python interpreter, it will execute all the first level statements which will  register all the classes and methods and functions in python. Python also assigns a value to a built in variable __name__, so we we run the program, it assigns values as __name__ = "__main__".
+
+We can use the value of __name__ to check if the main file is being run or imported in the another python module.
+
+```
+def my_function():
+    print("This is my function")
+
+def add():
+    print("This function is used for addition")
+
+# RUN THE FUNCTIONS IN MAIN
+if __name__ == '__main__':
+    my_function()
+    add()
+```
+
+
 
 
 
