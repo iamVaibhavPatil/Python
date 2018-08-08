@@ -1194,6 +1194,9 @@ I want to be decorated!
 Some extra code, after the original function
 ```
 
+`Decorator` are mainly used in the web frameworks to add more functionlity to the functions. These are heavily used in `Flask` and `DJango` frameowork.
+
+## Generators with Python
 
 
 
