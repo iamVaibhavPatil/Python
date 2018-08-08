@@ -1118,7 +1118,26 @@ print(my_new_func())
 >>> This is the greet() func inside hello!
 ```
 
-So this is the idea of **returning a function from function.**
+So this is the idea of `returning a function from function.`
+
+The idea of defining a function inside a function and returning that function and passing it to another function for execution is used to build the `decorator`.
+
+In below code, we can see we are passing function to another function for execution-
+
+```
+def hello():
+    return 'Hi Jose!'
+
+def other(some_other_func):
+    print('Other code runs here!')
+    print(some_other_func())
+
+other(hello)
+
+>>> 
+Other code runs here!
+Hi Jose!
+```
 
 
 
