@@ -1144,6 +1144,56 @@ Hi Jose!
 ```
 
 
+Lets create `decorator` using above process and add some extra functionality to a function
+
+```
+# CREATE NEW DECORATOR
+def new_decorator(original_func):
+    
+    def wrap_func():
+        
+        print("Some extra code, before the original function")
+        
+        original_func()
+        
+        print("Some extra code, after the original function")
+        
+    return wrap_func
+
+# FUNCTION WHO NEEDS DECORATIONS
+def func_needs_decorator():
+    print("I want to be decorated!")
+
+# EXECUTE WITHOUT DECORATOR
+func_needs_decorator()
+>>> I want to be decorated!
+
+# ADD DECORATOR - WE COULD DO THIS USING @ sybmol on original method
+decorated_func = new_decorator(func_needs_decorator)
+
+# EXECUTE THE DECORATED FUNCTION AND CHECK THE OUTPUT
+decorated_func()
+
+>>>
+Some extra code, before the original function
+I want to be decorated!
+Some extra code, after the original function
+```
+
+We can add decorations functionality ourself, but python provides `@` symbol to do the same thing on the original functions who needs decorations.
+
+```
+@new_decorator
+def func_needs_decorator():
+    print("I want to be decorated!")
+
+func_needs_decorator()
+>>>
+Some extra code, before the original function
+I want to be decorated!
+Some extra code, after the original function
+```
+
 
 
 
