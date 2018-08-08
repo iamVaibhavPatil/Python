@@ -1057,9 +1057,68 @@ def simple_stuff():
     return something
 ```
 
+**function within a function**  
+In Python, we can write function within function like below-
 
+```
+def hello(name ='Jose'):
+    print("The hello() function has been executed")
+    
+    def greet():
+        return '\t This is the greet() func inside hello!'
+    
+    def welcome():
+        return '\t This is welcome() inside hello'
+    
+    print(greet())
+    print(welcome())
+    print("This is the end of the hello function!")
 
+hello() -->
+The hello() function has been executed
+	 This is the greet() func inside hello!
+	 This is welcome() inside hello
+This is the end of the hello function!
 
+welcome() --> Return and error
+```
+
+If we call welcome() function outside, it will not work, as it is written inside the hello and scope is limited to hello only.
+
+One way of doing this is to return the welcome() or greet() function from hello(). We can certainly do that as below-
+
+```
+def hello(name ='Jose'):
+    print("The hello() function has been executed")
+    
+    def greet():
+        return '\t This is the greet() func inside hello!'
+    
+    def welcome():
+        return '\t This is welcome() inside hello'
+    
+    print("I am agoing to return a function!!")
+    
+    if name == 'Jose':
+        return greet
+    else:
+        return welcome
+
+my_new_func = hello('Jose')
+>>>The hello() function has been executed
+I am agoing to return a function!!
+
+my_new_func
+>>> <function __main__.hello.<locals>.greet()>
+
+my_new_func()
+>>>'\t This is the greet() func inside hello!'
+
+print(my_new_func())
+>>> This is the greet() func inside hello!
+```
+
+So this is the idea of **returning a function from function.**
 
 
 
