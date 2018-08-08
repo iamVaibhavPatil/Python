@@ -1057,7 +1057,11 @@ def simple_stuff():
     return something
 ```
 
-**function within a function**  
+To learn more decorator, let look at below concepts of functions-  
+- Function within a function  
+- Function Returning function  
+- Passing function as argument to other function and execute them  
+
 In Python, we can write function within function like below-
 
 ```
