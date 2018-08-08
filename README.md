@@ -1028,8 +1028,34 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-## Python Decorators  
- 
+## Python Decorators
+Decorators allow us to decorate a function. Imagine we have created a function-
+
+```
+def simple_func():
+    # DO SIMPLE STUFF
+    return something
+```
+
+Now you want to add some new capabilities to the function like below-
+
+```
+def simple_func():
+    # Want to do more stuff!
+    # Do Simple Stuff
+    return something
+```
+
+We can either add extra code to old function or create brand new function and add new code to that. But if we want to remove that extra functionality. We need to do it manually.
+
+We can do this using decorator. Decorators allows us to add extra functionality to function:
+
+```
+@some_decorator
+def simple_stuff():
+    # DO SIMPLE STUFF
+    return something
+```
 
 
 
