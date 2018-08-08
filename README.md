@@ -1196,6 +1196,10 @@ Some extra code, after the original function
 
 `Decorator` are mainly used in the web frameworks to add more functionlity to the functions. These are heavily used in `Flask` and `DJango` frameowork.
 
+http://flask.pocoo.org/
+http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
+https://www.djangoproject.com/
+
 ## Generators with Python
 
 
