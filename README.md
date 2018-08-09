@@ -1264,6 +1264,8 @@ def gen_fibon(n):
 
 for n in gen_fibon(5):
     print(n)
+
+>> 1 1 2 3 5
 ```
 
 
