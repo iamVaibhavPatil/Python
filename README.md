@@ -1268,6 +1268,39 @@ for n in gen_fibon(5):
 >> 1 1 2 3 5
 ```
 
+**next()**  
+This function allows us to get next value from generator function. By using this function, we can understand how generator keeps track of last value using yield and knows which is next value to print. When generator reaches to end it throws `StopIteration` error. `for` internally uses next() to and catches the StopIteration and stops the looping.
+
+```
+def simple_gen():
+    for x in range(3):
+        yield x
+
+g = simple_gen()
+g
+>>> <generator object simple_gen at 0x000001B3E69E2360>
+
+print(next(g)) -> 0
+print(next(g)) -> 1
+print(next(g)) -> 2
+print(next(g)) -> StopIteration
+```
+
+**iter**  
+We can convert the iterable objects into iterator using `iter()`. Once we convert it will return kind of generator.
+
+```
+mystring = 'hello'
+next(mystring)  --> This will throw 'str' object is not an iterator
+
+# We can convert the string ti iterator
+str_itr = iter(mystring)
+next(str_itr) --> 'h'
+```
+
+
+
+
 
 
 
