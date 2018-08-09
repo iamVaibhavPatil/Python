@@ -1298,6 +1298,21 @@ str_itr = iter(mystring)
 next(str_itr) --> 'h'
 ```
 
+**Generator Comprehension**  
+Similar to list comprehension, but instead of using square bracket[], it will use parenthesis().
+
+```
+my_list = [1,2,3,4,5]
+
+gencomp = (item for item in my_list if item > 3)
+
+for item in gencomp:
+    print(item)
+
+>>> 4
+5
+```
+
 
 
 
