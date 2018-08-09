@@ -1200,7 +1200,74 @@ http://flask.pocoo.org/
 http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/  
 https://www.djangoproject.com/  
 
-## Generators with Python
+## Python Generators
+Generator functions allow us to write a function that can send back a value and then later resume to pick up where it left off.
+
+Basically, Generators allow us to create sequence of values overtime instead of creating an entire sequence and holding it in memory.
+
+When a generator function is compiled they become an object that supports an iteration protocol. That means when they are called in code they don't actually return a values and then exit.
+
+Generator function will automatically suspend and resume their execution and state around the last point of value generation. The advantage is that instead of having to compute an entire series of values up front, the generator computes one value waits until next value is called for.
+
+For example- The `range()` function doesn't produce a list in memory for all the values from start to stop. Instead it just keeps track of the last number and the step size, to provide a flow of numbers.
+
+If we need the list, we have to transform the generator to a list with `list(range(0,10))`
+
+Let's create our own generators-
+
+```
+# NORMAL FUNCTION TO CREATE LIST OF CUBES FROM 0 -> n
+def create_cubes(n):
+    result = []
+    for x in range(0,n):
+        result.append(x**3)
+    return result
+
+create_cubes(10)
+
+>>> [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
+```
+
+Above function generates a list of cubes for range of range from 0->n. It generates the list at once and stores in memory.
+
+In below function we dont need entire list upfront to print number, we need only one number at a time.
+```
+for x in create_cubes(10):
+    print(x)
+```
+
+Lets convert above function as a generator to return one values at a time by using `yield` `instead of return`-
+
+```
+def create_cubes(n):
+    for x in range(0,n):
+        yield x**3
+
+list(create_cubes(10))
+>>> [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
+
+for x in create_cubes(10):
+    print(x)
+
+# THIS WILL PRINT CUBE NUMBERS. BUT IT RETRUNS ONE VALUE AT TIME INSTEAD OF ENTIRE SEQUENCE AT ONCE.
+```
+
+```
+#FIBONACCI USING GENERATORS
+def gen_fibon(n):
+    
+    a = 1
+    b = 1
+    for num in range(n):
+        yield a
+        a,b = b,a+b
+
+for n in gen_fibon(5):
+    print(n)
+```
+
+
+
 
 
 
