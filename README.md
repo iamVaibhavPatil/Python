@@ -1527,6 +1527,8 @@ We can also use Jupyter notebooks `magic function` time function as
 >>> 23.4 µs ± 1.33 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 ```
 
+## Regular Expressions
+
 
 
 
