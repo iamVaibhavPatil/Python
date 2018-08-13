@@ -1469,9 +1469,63 @@ print(d2)
 >>> 1990-03-11
 ```
 
-## Python Debugger
+## Python Debugger(pdb)
+Python build in module `pdb` helps to debug the program.
+pdb includes interactive debugging environment for python like look at the values of variables, watch program execution step by step.
+
+```
+import pdb
+x = [1,3,4]
+y = 2
+z = 3
+
+result = y + z
+print(result)
+
+pdb.set_trace()
+
+result2 = y + x
+print(result2)
+```
+
+Type `q` for exit form debugger.
 
 
+## Timing your code - timeit
+Helps to determine the time it required for process to run the code.
+
+Belw example will check..how much time it took to generate number from 0 to 99....100000 times.
+
+```
+import timeit
+
+"-".join(str(n) for n in range(100))
+>>> '0-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-37-38-39-40-41-42-43-44-45-46-47-48-49-50-51-52-53-54-55-56-57-58-59-60-61-62-63-64-65-66-67-68-69-70-71-72-73-74-75-76-77-78-79-80-81-82-83-84-85-86-87-88-89-90-91-92-93-94-95-96-97-98-99'
+
+# Check the time rquired to generate for 10000 times.
+timeit.timeit('"-".join(str(n) for n in range(100))',number=10000)
+>>> 0.38041856247556793
+
+timeit.timeit('"-".join([str(n) for n in range(100)])',number=10000)
+>>> 0.28674537285778
+
+timeit.timeit('"-".join(map(str,range(100)))',number=10000)
+>>> 0.4036069307620096
+```
+
+We can also use Jupyter notebooks `magic function` time function as
+%timeit like below
+
+```
+%timeit "-".join(str(n) for n in range(100))
+>>> 34.9 µs ± 2.19 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+
+%timeit "-".join([str(n) for n in range(100)])
+>>> 28.5 µs ± 863 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+
+%timeit "-".join(map(str,range(100)))
+>>> 23.4 µs ± 1.33 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+```
 
 
 
