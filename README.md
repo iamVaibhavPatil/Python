@@ -1314,6 +1314,163 @@ for item in gencomp:
 ```
 
 ## Advanced Collections
+Collection of advanced built in data types.
+
+### Counter
+Counter is dict subclass which helps count the hashable objects.
+
+```
+#Counter
+from collections import Counter
+
+# Counter
+l = [1,1,1,1,2,3,4,3,4,3,4,4,4,3,3,3,5,5,5,12]
+Counter(l)
+>>> Counter({1: 4, 2: 1, 3: 6, 4: 5, 5: 3, 12: 1})
+
+# Counter for String characters
+s = 'addssddddggfffaaaaadddsss'
+Counter(s)
+>>> Counter({'a': 6, 'd': 9, 's': 5, 'g': 2, 'f': 3})
+
+# Count number of words
+s = 'How many times does each word show up in this sentenece word wrod show up up'
+words = s.split()
+Counter(words)
+>>>
+Counter({'How': 1,
+         'many': 1,
+         'times': 1,
+         'does': 1,
+         'each': 1,
+         'word': 2,
+         'show': 2,
+         'up': 3,
+         'in': 1,
+         'this': 1,
+         'sentenece': 1,
+         'wrod': 1})
+
+# Common methods can be called
+c = Counter(words)
+c.most_common(2)
+>>> [('up', 3), ('word', 2)]
+```
+
+### defaultdict
+default dict takes first argument as default data type for the dictionary.
+
+It will never raise KeyError. Any key that does not exists gets the value returned by the default factory.
+
+```
+from collections import defaultdict
+
+d = defaultdict(lambda: 0)
+d['one']
+>>> 0
+
+d['two'] = 2
+d['two']
+>>> 2
+```
+
+### OrderedDict
+OrderedDict retains the order in which contents are added.
+
+```
+from collections import OrderedDict
+
+d = OrderedDict()
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+d['e'] = 5
+d['f'] = 6
+d['g'] = 7
+d['h'] = 8
+d['i'] = 9
+
+for k,v in d.items():
+    print(k,v)
+
+>>>
+a 1
+b 2
+c 3
+d 4
+e 5
+f 6
+g 7
+h 8
+i 9
+```
+
+### namedtuple
+NamedTuple is basically a normal tuple, but it creates an object type and allowes to name the various fields.
+
+```
+from collections import namedtuple
+
+Dog = namedtuple('Dog','age breed name')
+sam = Dog(age=2,breed='Lab',name='Sammy')
+sam
+>>> Dog(age=2, breed='Lab', name='Sammy')
+
+sam.age
+>>> 2
+```
+
+
+## Datetime
+Helps to deal with timestamp in python. 
+
+**datetime.time()** will hold only time information not the Date information.
+
+```
+import datetime
+t = datetime.time(5,25,1)
+print(t)
+>>> 05:25:01
+t.hour
+>>> 5
+t.minute
+>>> 25
+
+print(datetime.time.min)
+>>> 00:00:00
+print(datetime.time.max)
+>>> 23:59:59.999999
+print(datetime.time.resolution)
+>>> 0:00:00.000001
+```
+
+**datetime.date()** will hold date information.
+
+```
+today = datetime.date.today()
+print(today)
+>>> 2018-08-13
+
+today.timetuple()
+>>> time.struct_time(tm_year=2018, tm_mon=8, tm_mday=13, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=225, tm_isdst=-1)
+
+today.year
+>>> 2018
+
+# Create a Date
+d1 = datetime.date(2018,3,11)
+print(d1)
+>>> 2018-03-11
+
+# Replace Year
+d2 = d1.replace(year=1990)
+print(d2)
+>>> 1990-03-11
+```
+
+## Python Debugger
+
 
 
 
