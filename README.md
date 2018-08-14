@@ -1688,9 +1688,10 @@ Dictionaries has advanced functions which helps to manipulate dict. We can also 
 
 ​{k:v**2 for k,v in zip(['a','b'],range(2))}
 >>> {'a': 0, 'b': 1}
-
-
 ```
+
+## Advanced List
+
 
 
 
