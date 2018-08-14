@@ -1691,7 +1691,20 @@ Dictionaries has advanced functions which helps to manipulate dict. We can also 
 ```
 
 ## Advanced List
+List functions - sort, reverse, remove, index, insert, append, extend, pop.
 
+```
+x = [1,2,3]
+x.append([4,5])
+x
+>>> [1, 2, 3, [4, 5]]
+
+# Extend will extend the original list
+x = [1,2,3]
+x.extend([4,5])
+x
+>>> [1, 2, 3, 4, 5]
+```
 
 
 
