@@ -1676,7 +1676,21 @@ s.difference(sc)
 >>> {4}
 ```
 
-There are many such methods - `difference_update, discard, intersection, intersection_update, isdisjoint, issubset, issuperset, symmetric_difference, symmetric_difference_update, union, update`
+There are many such methods - `difference_update, discard, intersection, intersection_update, isdisjoint, issubset, issuperset, symmetric_difference, symmetric_difference_update, union, update`.
+
+## Advanced Dictionaries
+Dictionaries has advanced functions which helps to manipulate dict. We can also do dict comprehension.
+
+```
+{x:x**2 for x in range(10)}
+
+>>> {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+​{k:v**2 for k,v in zip(['a','b'],range(2))}
+>>> {'a': 0, 'b': 1}
+
+
+```
 
 
 
