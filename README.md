@@ -1576,6 +1576,30 @@ There is a fast version of it -`cStringIO` wrtitten in `C` language.
 
 
 ## Advanced Numbers
+Python provides some build in functions which can be helpful to work with numbers
+
+```
+hex(12)
+>>> '0xc'
+
+bin(10)
+>>>'0b1010'
+
+pow(2,4)
+>>> 16
+
+abs(-2)
+>>> 2
+
+round(3.1)
+>>> 3.0
+
+round(3.141567,2)
+>>> 3.14
+```
+
+## Advanced String
+
 
 
 
