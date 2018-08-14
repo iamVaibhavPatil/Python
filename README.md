@@ -1646,7 +1646,37 @@ s.partition('i') --> Partition will split at first instance. It returns string b
 ```
 
 ## Advanced Sets
+Advanced methods on set.
 
+```
+s = set()
+
+s.add(1)
+s.add(2)
+s
+>>> {1, 2}
+
+s.add(2)
+s
+>>> {1, 2}
+
+s.clear()
+s
+>>> set()
+
+s = {1,2,3}
+sc = s.copy()
+s.add(4)
+s
+>>> {1, 2, 3, 4}
+sc
+>>> {1, 2, 3}
+
+s.difference(sc)
+>>> {4}
+```
+
+There are many such methods - `difference_update, discard, intersection, intersection_update, isdisjoint, issubset, issuperset, symmetric_difference, symmetric_difference_update, union, update`
 
 
 
