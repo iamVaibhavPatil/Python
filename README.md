@@ -1600,6 +1600,54 @@ round(3.141567,2)
 
 ## Advanced String
 
+```
+s = 'hello world'
+s.capitalize()
+
+s.upper()
+s.lower()
+
+s.count('o')
+
+s.find('o')
+
+s.center(20,'z')
+>>>'zzzzhello worldzzzzz'
+
+'hello\thi'.expandtabs()
+>>>'hello   hi'
+
+s.isalnum() --> Check if alphanumeric
+>>> True
+
+s.isalpha() --> Check if alphabets
+>>> True
+
+s.islower()
+>>> True
+
+s.isspace()
+>>> False
+
+s.istitle()  --> Returns True if s is title case string
+>>> False
+
+s.isupper()
+>>> False
+
+s.endswith('o')
+>>> True
+
+s.split('e')   ---> SPlit at every instance
+>>> ['h', 'llo']
+
+s.partition('i') --> Partition will split at first instance. It returns string before it, partition itself, string after it.
+>>> ('h', 'i', 'hihihihihihiihhhh')
+```
+
+## Advanced Sets
+
+
 
 
 
