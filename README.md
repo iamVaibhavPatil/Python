@@ -1567,8 +1567,15 @@ We can also do - `split`, `findall`, `meta character regular expression for more
 The StringIO module implements an in-memory file like object. This object can be used as input or output to most functions that would expect a standard file object.
 
 ```
-
+import StringIO
 ```
+
+StringIO basically convert string into a file object, so we can work on it the same way we work on file. It will be mostly used in web scrapping for reading string and converting to file.
+
+There is a fast version of it -`cStringIO` wrtitten in `C` language.
+
+
+## Advanced Numbers
 
 
 
