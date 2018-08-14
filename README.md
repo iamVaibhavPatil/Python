@@ -1528,6 +1528,39 @@ We can also use Jupyter notebooks `magic function` time function as
 ```
 
 ## Regular Expressions
+Regular expression are used for extracting thing or validating the data with the string.
+
+```
+import re
+
+patterns = ['term1','term2']
+text = 'This is a string with term1, but not the other term'
+
+for pattern in patterns:
+    print('Searching for "%s" in: \n"%s"'  %(pattern, text))
+    
+    # Check for match
+    if re.search(pattern, text):
+        print('\n')
+        print('Match was found. \n')
+    else:
+        print('\n')
+        print('No Match was found.\n')
+
+>>>
+Searching for "term1" in: 
+"This is a string with term1, but not the other term"
+
+
+Match was found. 
+
+Searching for "term2" in: 
+"This is a string with term1, but not the other term"
+
+
+No Match was found.
+```
+
 
 
 
