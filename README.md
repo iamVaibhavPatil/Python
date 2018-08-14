@@ -1561,6 +1561,11 @@ Searching for "term2" in:
 No Match was found.
 ```
 
+We can also do - `split`, `findall`, `meta character regular expression for more advanced expression`.
+
+## StringIO
+
+
 
 
 
