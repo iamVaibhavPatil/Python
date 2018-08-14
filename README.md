@@ -1564,7 +1564,11 @@ No Match was found.
 We can also do - `split`, `findall`, `meta character regular expression for more advanced expression`.
 
 ## StringIO
+The StringIO module implements an in-memory file like object. This object can be used as input or output to most functions that would expect a standard file object.
 
+```
+
+```
 
 
 
