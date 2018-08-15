@@ -1828,7 +1828,38 @@ for item in widgets.Widget.widget_types.items():
 ### Widget Events
 
 
-### Widget Styling
+### Widget Styling and Layout
+IPython widget is build using BootStrap framework, so we can leverage the bootstrap classes to add styling to the widget controls. We can also change the layout of the widgets.
+
+```
+import ipywidgets as widgets
+from IPython.display import display
+
+w = widgets.IntSlider()
+display(w)
+
+# CHANGE THE LAYOUT AND DISPLAY POSITION
+w.layout.margin = 'auto'
+w.layout.height = '75px'
+
+x = widgets.IntSlider(value=15,description='New Slider')
+display(x)
+
+# ASSIGN SAME LAYOUT FROM W TO X
+x.layout = w.layout
+```
+
+Styling the widget  
+```
+widgets.Button(description='Ordinary Button',button_style='')
+>>> Display normal button
+
+# CHANGE COLOR TO DANGER WITH BOOTSTRAP
+widgets.Button(description='Ordinary Button',button_style='danger')
+>>> Display Danger Button
+```
+
+
 
 
 
