@@ -1713,9 +1713,78 @@ Different GUI frameworks for different purpposes -
 - [Full GUI Programming List](https://wiki.python.org/moin/GuiProgramming)  
 - [PyGame](https://www.pygame.org/hifi.html)  
 
-Widgets in Jupyter Notebook
+### Widgets in Jupyter Notebook
 
+Using ipywidgets we can create an interactive widgets in Python notebook which can be helpful for data science.
 
+`Interact` function can create widgets and display on Jupyter notebook, based on the input type passed to it.
+
+```
+from ipywidgets import interact,interactive,fixed
+import ipywidgets as widgets
+
+def func(x):
+    return x
+
+interact(func,x=10)  --> This will create a slider
+interact(func,x=True)  --> Checkbox
+interact(func,x='Vaibhav')  --> TextField
+```
+
+In above code we are passing function to `interact()` method, but we can do the same thing using `decorator` as below-
+
+```
+# THIS WILL CREATE CHECKBOX AND SLIDER
+@interact(x=True, y=1.0)
+def g(x,y):
+    return (x,y)
+
+# KEEPING VALUE FIXED, SO USER CANNOT CHANGE IT
+@interact(x=True, y=fixed(1.0))
+def g(x,y):
+    return (x,y)
+
+# OVERRIDING DEFAULT SETTINGS OF SLIDER
+interact(func,x=widgets.IntSlider(min=-100,max=100,step=1,value=0))
+
+# WITH DECORATOR AND ABBREVIATIONS
+@interact(x=(0.0,20.0,0.5))
+def h(x=5.0):
+    return x
+
+# DROPDOWN MENU
+interact(func,x=['option1','option2','option3'])
+
+# DROPDOWN WITH KEY VALUE
+interact(func,x={'one':1,'two':2,'ten':10})
+```
+
+`interactive` - Usefull when the widgets are already been produced or when access the data that is bound to user interface controls.
+
+```
+from IPython.display import display
+
+def f(a,b):
+    display(a+b)
+    return a+b
+
+# CALL METHOD
+w = interactive(f, a=10, b=20)
+
+type(w)
+>>> ipywidgets.widgets.interaction.interactive
+
+w.children
+>>>
+(IntSlider(value=10, description='a', max=30, min=-10),
+ IntSlider(value=20, description='b', max=60, min=-20),
+ Output())
+
+# DISPLAY OF HOW W LOOKS LIKE. IT WILL CREATE 2 SLIDERS
+display(w)
+```
+
+We need to use display function to display the interactive value from function. interactive bascially building a larger UI in itself and we can see that with `children` method.
 
 
 
