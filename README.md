@@ -1706,6 +1706,14 @@ x
 >>> [1, 2, 3, 4, 5]
 ```
 
+## Introduction to GUIs
+
+Different GUI frameworks for different purpposes -  
+- [Most Common GUI frameworks](https://wiki.python.org/moin/GUI%20Programming%20in%20Python)  
+- [Full GUI Programming List](https://wiki.python.org/moin/GuiProgramming)  
+- [PyGame](https://www.pygame.org/hifi.html)  
+
+
 
 
 
