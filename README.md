@@ -1786,6 +1786,35 @@ display(w)
 
 We need to use display function to display the interactive value from function. interactive bascially building a larger UI in itself and we can see that with `children` method.
 
+### Widget Basic
+
+```
+import ipywidgets as widgets
+from IPython.display import display
+
+# WE CAN CREATE AND DISPLAY LATER ON USING display function
+w = widgets.IntSlider()
+display(w)
+
+w.value --> Print current value
+w.value = 50 --> set current value
+w.keys --> Get all keys which can be access on it.
+w.close() --> Close
+
+
+# LINKING WIDGETS
+a = widgets.FloatText()
+b = widgets.FloatSlider()
+
+display(a,b)
+
+mylink = widgets.jslink((a,'value'),(b,'max'))
+
+# UNLINK THEM
+mylink.unlink()
+```
+
+
 
 
 
