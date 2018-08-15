@@ -1859,8 +1859,11 @@ widgets.Button(description='Ordinary Button',button_style='danger')
 >>> Display Danger Button
 ```
 
+### Custom Widget
+Custom Widget to show how we can use them to show different data points. We need to import NumPy, Matplotlib and SciPy things from IPython.
 
-
+## Summary
+Completed the Python BootCamp.
 
 
 
