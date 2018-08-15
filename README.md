@@ -1825,6 +1825,13 @@ for item in widgets.Widget.widget_types.items():
     print(item[0][2][:-5])
 ```
 
+### Widget Events
+
+
+### Widget Styling
+
+
+
 
 
 
