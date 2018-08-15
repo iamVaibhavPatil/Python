@@ -1713,8 +1713,7 @@ Different GUI frameworks for different purpposes -
 - [Full GUI Programming List](https://wiki.python.org/moin/GuiProgramming)  
 - [PyGame](https://www.pygame.org/hifi.html)  
 
-
-
+Widgets in Jupyter Notebook
 
 
 
