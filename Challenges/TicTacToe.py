@@ -1,6 +1,11 @@
 import random
 from os import system, name
 
+'''
+DESCRIPTION - TIC TAC TOE Game
+Author - Vaibhav Patil
+'''
+
 def clear():
     if name == 'nt':
         _ = system('cls')
